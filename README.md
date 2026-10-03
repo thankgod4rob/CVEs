@@ -1,4 +1,4 @@
-Proof of concept (PoC) exploits for some CVEs I thought looked cool, everything by me
+Proof of concept (PoC) exploits for some CVEs I thought looked cool, everything authored by me
 
 | CVE | Software | Description |
 |-----|----------|-------------|
