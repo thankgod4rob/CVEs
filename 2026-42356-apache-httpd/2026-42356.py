@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+# Exploit Title: Apache HTTPD - Wrong Handler on Internal Redirect RCE
+# Date: 2026-10-02
+# Exploit Author: thankgod4rob
+# Vendor Homepage: https://httpd.apache.org/
+# Software Link: https://archive.apache.org/dist/httpd/
+# Version: 2.4.60 - 2.4.68
+# Tested on: Debian (Docker httpd:2.4.68)
+# CVE: CVE-2026-42356
 """
 CVE-2026-42356 PoC
 Apache HTTP Server 2.4.60 through 2.4.68
