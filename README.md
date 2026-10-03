@@ -1,6 +1,4 @@
-# CVEs
-
-Proof of concept exploits for various CVEs.
+Proof of concept (POC) exploits for some CVEs I thought looked cool, everything written by me
 
 | CVE | Software | Description |
 |-----|----------|-------------|
